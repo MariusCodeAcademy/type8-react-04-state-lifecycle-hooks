@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Counter from './components/Counter';
 
 function App() {
   // State - react componento specialus kintamasis nuo kurio gali priklausyti kaip atvsivaizduoja jsx
@@ -15,7 +16,7 @@ function App() {
     isLoggedIn = false;
     // niekada tiesiogiai neprilyginam state jokiai reiksmei
     // isLoggedInState = false;
-    setIsLoggedInState(false);
+    // setIsLoggedInState(false);
     // console.log('isLoggedInState ===', isLoggedInState);
     // console.log('isLoggedIn ===', isLoggedIn);
   }, 3000);
@@ -25,6 +26,7 @@ function App() {
       <h1>App</h1>
       <h2>isLoggedInState: {isLoggedInState.toString()}</h2>
       <h2>{isLoggedInState ? 'is logged' : 'is not logged in'}</h2>
+      <Counter />
     </div>
   );
 }
