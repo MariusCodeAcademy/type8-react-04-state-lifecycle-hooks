@@ -15,7 +15,12 @@ const userDummyData = [
 
 function UsersList() {
   console.log('UsersList ran ======');
-  const [usersArray, setUsersArray] = useState([]);
+  const [usersArray, setUsersArray] = useState(userDummyData);
+
+  function deleteUser(id) {
+    const filtered = usersArray.filter();
+    setUsersArray(filtered);
+  }
 
   async function getUsers() {
     const resp = await fetch('https://jsonplaceholder.typicode.com/users');
